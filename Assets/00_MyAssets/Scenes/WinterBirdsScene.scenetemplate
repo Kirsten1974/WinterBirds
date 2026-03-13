@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13966, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: WinterBirdsScene
+  m_EditorClassIdentifier: UnityEditor.dll::UnityEditor.SceneTemplate.SceneTemplateAsset
+  templateScene: {fileID: 102900000, guid: 813c358051026cf4386685ace6ca83c0, type: 3}
+  templateName: 
+  description: 
+  preview: {fileID: 0}
+  dependencies:
+  - dependency: {fileID: 7143725575474780454, guid: 0af3f3b2b2baeec4988fe4e6764eeb83,
+      type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2100000, guid: 46c7f624ed86b224fb460a969584b0bc, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: 9a6b709257603a44aa3c55a8c304a3b8, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2100000, guid: 715348cdb9d8e2a43883fc5923e74e41, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 5827045132903970810, guid: bcde754e2adbe8342be502d30b8af6bf,
+      type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 660053692614891299, guid: 4de9012ab91865b4f95b3eac9063ee1d,
+      type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2100000, guid: db74e81b5aa60d04393acefd16cd7ca6, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: 5dea222dd44bb7e40b0f8ebf4679b69c, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 4379098015676025702, guid: cab4de22c74a3d149b6420287d5a0e88,
+      type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2100000, guid: dbb05a39d51247540a2149bd0a614178, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: 731abc8c43625984f96410975d818bc2, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2543405432977959737, guid: 5a912551588fed849a77de07e22e671e,
+      type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: 323ec304ad17b1b46b1c261df23af78b, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 2100000, guid: d76fe8bed3f0dc042b6d2573eae474cb, type: 2}
+    instantiationMode: 0
+  templatePipeline: {fileID: 0}
+  badge: {fileID: 0}
+  addToDefaults: 0
