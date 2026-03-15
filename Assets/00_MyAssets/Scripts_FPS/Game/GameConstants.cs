@@ -9,7 +9,7 @@
         public const string k_MouseAxisNameHorizontal = "Mouse X";
         public const string k_AxisNameJoystickLookVertical = "Look Y";
         public const string k_AxisNameJoystickLookHorizontal = "Look X";
-        
+
         public const string k_ButtonNameAim = "Aim";
         public const string k_ButtonNameFire = "Fire";
         public const string k_ButtonNameSprint = "Sprint";
