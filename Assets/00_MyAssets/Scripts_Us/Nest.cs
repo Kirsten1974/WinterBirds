@@ -6,8 +6,8 @@ public class Nest : MonoBehaviour
 //nest will provide health to player
 {
     /* [SerializeField] private */
-    float nestHealth = 1.0f;
-    bool nestLost = false;
+    public float nestHealth = 1.0f;
+    private bool nestLost = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
