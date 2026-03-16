@@ -1,5 +1,4 @@
-﻿using Unity.FPS.Game;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -12,7 +11,7 @@ namespace Unity.FPS.UI
 
         private InputAction m_SubmitAction;
         private InputAction m_NavigateAction;
-        
+
         void Start()
         {
             Cursor.lockState = CursorLockMode.None;
@@ -20,7 +19,7 @@ namespace Unity.FPS.UI
             EventSystem.current.SetSelectedGameObject(null);
 
             m_SubmitAction = InputSystem.actions.FindAction("UI/Submit");
-            m_NavigateAction  = InputSystem.actions.FindAction("UI/Navigate");
+            m_NavigateAction = InputSystem.actions.FindAction("UI/Navigate");
         }
 
         void LateUpdate()
@@ -28,7 +27,7 @@ namespace Unity.FPS.UI
             if (EventSystem.current.currentSelectedGameObject == null)
             {
                 if (m_SubmitAction.WasPressedThisFrame()
-                    || m_NavigateAction.ReadValue<Vector2>().sqrMagnitude != 0 )
+                    || m_NavigateAction.ReadValue<Vector2>().sqrMagnitude != 0)
                 {
                     EventSystem.current.SetSelectedGameObject(DefaultSelection.gameObject);
                 }

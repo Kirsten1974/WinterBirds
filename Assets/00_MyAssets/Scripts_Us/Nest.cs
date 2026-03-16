@@ -1,30 +1,48 @@
-using System;
 using UnityEngine;
 
 public class Nest : MonoBehaviour
 
-    //want the nest's own health to deteriorate slowly over time
-    //nest will provide health to player
+//want the nest's own health to deteriorate slowly over time
+//nest will provide health to player
 {
-    [SerializeField] private float nestHealth = 1.0f;
-
+    /* [SerializeField] private */
+    public float nestHealth = 1.0f;
+    private bool nestLost = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-         
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        do
+        //do
+        //{
+        //    nestHealth = nestHealth - Time.deltaTime;
+        //    Debug.Log(nestHealth);
+        //}
+        //while (nestHealth > 0f);
+        if (nestLost == false)
         {
-            nestHealth = nestHealth - Time.deltaTime;
-            Debug.Log(nestHealth);
+            if (nestHealth > 0f)
+            {
+                nestHealth = nestHealth - Time.deltaTime * 0.5f;
+
+                if (nestHealth < 0f)
+                {
+                    nestHealth = 0f;
+                }
+                Debug.Log(nestHealth);
+            }
+
+            else
+            {
+                Debug.Log("Nest Lost");
+                nestLost = true;
+                Destroy(gameObject);
+            }
         }
-        while (nestHealth > 0f);
-        
-
-
     }
 }
+

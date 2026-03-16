@@ -1,5 +1,4 @@
-﻿using Unity.FPS.Game;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
@@ -9,7 +8,7 @@ namespace Unity.FPS.UI
     {
         public GameObject ObjectToToggle;
         public bool ResetSelectionAfterClick;
-        
+
         private InputAction m_CancelAction;
 
         void Start()

@@ -55,7 +55,7 @@ namespace Unity.FPS.Gameplay
             m_CrouchAction = InputSystem.actions.FindAction("Player/Crouch");
             m_ReloadAction = InputSystem.actions.FindAction("Player/Reload");
             m_NextWeaponAction = InputSystem.actions.FindAction("Player/NextWeapon");
-            
+
             m_MoveAction.Enable();
             m_LookAction.Enable();
             m_JumpAction.Enable();
@@ -97,14 +97,14 @@ namespace Unity.FPS.Gameplay
         {
             if (!CanProcessInput())
                 return 0.0f;
-            
+
             float input = m_LookAction.ReadValue<Vector2>().x;
 
             if (InvertXAxis)
                 input *= -1;
 
             input *= LookSensitivity;
-            
+
 #if UNITY_WEBGL
             // Mouse tends to be even more sensitive in WebGL due to mouse acceleration, so reduce it even more
             input *= WebglLookSensitivityMultiplier;
@@ -117,14 +117,14 @@ namespace Unity.FPS.Gameplay
         {
             if (!CanProcessInput())
                 return 0.0f;
-            
+
             float input = m_LookAction.ReadValue<Vector2>().y;
 
             if (InvertYAxis)
                 input *= -1;
 
             input *= LookSensitivity;
-            
+
 #if UNITY_WEBGL
             // Mouse tends to be even more sensitive in WebGL due to mouse acceleration, so reduce it even more
             input *= WebglLookSensitivityMultiplier;
@@ -231,7 +231,7 @@ namespace Unity.FPS.Gameplay
 
                 if (input > 0f)
                     return -1;
-                
+
                 if (input < 0f)
                     return 1;
             }
