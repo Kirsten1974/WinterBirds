@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Nest : MonoBehaviour, IDamageable
+public class Nest : MonoBehaviour
 
 //want the nest's own health to deteriorate slowly over time
 //nest will provide health to player
