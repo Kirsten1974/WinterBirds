@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Data.Common;
 using UnityEngine;
 
@@ -9,17 +10,16 @@ public abstract class AnimalBase : MonoBehaviour
 
     }
 
-    [SerializeField] float moveSpeed;
-    [SerializeField] float attackDamage;
-    [SerializeField] float giveUpTimer;
-    [SerializeField] float animalHealth;
+    [SerializeField] protected float moveSpeed;
+    [SerializeField] protected float attackDamage;
+    [SerializeField] protected float giveUpTimer;
+    [SerializeField] protected float animalHealth;
+    [SerializeField] protected float spawnRate;
 
-    public abstract void DoDamage(int amount);
+  
+    public abstract void DoDamage(float amount);
 
-    public virtual void DoDamageToNest(int amount)
-    {
-
-    }
+    public abstract void DoDamageToNest(float amount);
 
     // Update is called once per frame
     void Update()
