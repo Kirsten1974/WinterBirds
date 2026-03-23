@@ -2,13 +2,10 @@ using JetBrains.Annotations;
 using System.Data.Common;
 using UnityEngine;
 
-public abstract class AnimalBase : MonoBehaviour
+public abstract class AnimalBase : MonoBehaviour //, IEffects
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
 
-    }
 
     [SerializeField] protected float moveSpeed;
     [SerializeField] protected float attackDamage;
@@ -16,7 +13,14 @@ public abstract class AnimalBase : MonoBehaviour
     [SerializeField] protected float animalHealth;
     [SerializeField] protected float spawnRate;
 
-  
+
+    //public void EffectWeather();
+    //{   throw new System.NotImplementedException(); 
+    
+    //void EffectWeather(); //rain, sunny...etc.  if rain, more worm spawn + no cats
+    //void EffectTemperature(); //affects nutritional spawns
+    //void EffectWindSpeed();
+    //void EffectTimeOfDay();
     public abstract void DoDamage(float amount);
 
     public abstract void DoDamageToNest(float amount);
