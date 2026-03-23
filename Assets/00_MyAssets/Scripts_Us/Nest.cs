@@ -6,8 +6,8 @@ public class Nest : MonoBehaviour
 //nest will provide health to player
 {
     /* [SerializeField] private */
-    public float nestMaxHealth = 1f;
-    public float nestCurrentHealth = 1.0f;
+    public float nestMaxHealth;
+    public float nestCurrentHealth;
 
     public Vector3 originalNestSize;
     private bool nestLost = false;
