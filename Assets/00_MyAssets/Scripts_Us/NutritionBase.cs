@@ -4,7 +4,7 @@ public abstract class NutritionBase : MonoBehaviour
 {
     [SerializeField] float nutrition;
     [SerializeField] float appearance;
-    [SerializeField] float nothin;
+    [SerializeField] float spawnRate;
 
     public abstract void AddHealth();
     public abstract void CheckWeather();
