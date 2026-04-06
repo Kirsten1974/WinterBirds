@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField] private float speed = 0f;
+    [SerializeField] private float turnSpeed;
     private float horizontalInput;
     private float verticalInput;
 
@@ -10,7 +11,9 @@ public class PlayerMove : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        //Code automatically puts in what Sabrina's recommended turnSpeed to speed ratio
+        //when using rotation functions
+        //turnSpeed = speed * 4f;  
     }
 
     // Update is called once per frame
@@ -20,7 +23,9 @@ public class PlayerMove : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
 
         transform.Translate(Vector3.forward * speed * verticalInput * Time.deltaTime); //moves forwards or back
-        transform.Translate(Vector3.right * speed * horizontalInput * Time.deltaTime); //moves left or right
+        transform.Translate(Vector3.right * turnSpeed * horizontalInput * Time.deltaTime); //moves left or right
+        //rotates bird
+        //transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
      
              
 
