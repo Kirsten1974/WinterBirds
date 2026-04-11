@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI.Table;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -23,7 +24,8 @@ public class PlayerMove : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
 
         transform.Translate(Vector3.forward * speed * verticalInput * Time.deltaTime); //moves forwards or back
-        transform.Translate(Vector3.right * turnSpeed * horizontalInput * Time.deltaTime); //moves left or right
+        transform.Rotate(Vector3.up * turnSpeed * horizontalInput * Time.deltaTime); //moves left or right 
+       
         //rotates bird
         //transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
      
