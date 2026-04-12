@@ -849,7 +849,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194958862}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f3bff83445ae69409aa7a9801790149, type: 3}
   m_Name: 
@@ -859,7 +859,6 @@ MonoBehaviour:
   - {fileID: 1177044670154092836, guid: ea4316119c5e71445b2e5c01f8fc3317, type: 3}
   enemyPrefabs:
   - {fileID: 14061192}
-  - {fileID: 0}
 --- !u!4 &194958864
 Transform:
   m_ObjectHideFlags: 0
@@ -3427,7 +3426,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 100
+  field of view: 55
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -3528,6 +3527,7 @@ GameObject:
   - component: {fileID: 1594558855}
   - component: {fileID: 1594558854}
   - component: {fileID: 1594558856}
+  - component: {fileID: 1594558857}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -3608,13 +3608,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594558853}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 2, z: 10}
+  m_LocalRotation: {x: 0.42261827, y: 0, z: 0, w: 0.9063079}
+  m_LocalPosition: {x: 0, y: 24, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 599216922}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: 0, z: 0}
 --- !u!114 &1594558856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3644,6 +3644,19 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!114 &1594558857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594558853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f494b75d05ac9e3499672bcb7227cdc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DayAndNight
+  degreepersec: 8
 --- !u!1001 &1695849607
 PrefabInstance:
   m_ObjectHideFlags: 0
