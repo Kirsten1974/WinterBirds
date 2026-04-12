@@ -273,8 +273,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d5e61e9b08f064eb20ade548e6311a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMove
-  speed: 30
-  turnSpeed: 0
+  speed: 20
+  turnSpeed: 1
 --- !u!135 &53378590
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3497,7 +3497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Nest
   nestMaxHealth: 100
-  nestCurrentHealth: 100
+  nestCurrentHealth: 20
   originalNestSize: {x: 0, y: 0, z: 0}
 --- !u!1 &1549148687 stripped
 GameObject:

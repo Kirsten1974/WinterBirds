@@ -7,6 +7,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float turnSpeed;
     private float horizontalInput;
     private float verticalInput;
+    private float flightInput;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,14 +23,15 @@ public class PlayerMove : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");//taken from input manager
         verticalInput = Input.GetAxis("Vertical");
+        flightInput = Input.GetAxis("Flight");
 
         transform.Translate(Vector3.forward * speed * verticalInput * Time.deltaTime); //moves forwards or back
-        transform.Rotate(Vector3.up * turnSpeed * horizontalInput * Time.deltaTime); //moves left or right 
-       
-        //rotates bird
-        //transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
-     
-             
+        transform.Rotate(Vector3.up* turnSpeed * horizontalInput * Time.deltaTime); //rotates bird
+        transform.Rotate(Vector3.left * turnSpeed * flightInput * Time.deltaTime); // makes the bird go up and down by using z and x keys
+        //moves left or right 
+        //transform.Translate(Vector3.right, turnSpeed * horizontalInput * Time.deltaTime);
 
-        }
+
+
+    }
 }
