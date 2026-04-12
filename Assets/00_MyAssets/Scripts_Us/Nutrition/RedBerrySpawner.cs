@@ -24,6 +24,8 @@ public class RedBerrySpawner : NutritionBase
     // Update is called once per frame
     void Update()
     {
+        
+        
         CheckWeather();
 
         AddHealth(5);
