@@ -13,7 +13,7 @@ public class Cat : AnimalBase
 
         // Add extra functionality.
     }
-
+    public Transform sun;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

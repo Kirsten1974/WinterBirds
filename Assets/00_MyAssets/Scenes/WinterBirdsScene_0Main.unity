@@ -3656,7 +3656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f494b75d05ac9e3499672bcb7227cdc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DayAndNight
-  degreepersec: 8
+  degreepersec: 10
 --- !u!1001 &1695849607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5017,6 +5017,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8591903206400236081, guid: b146cae64ee4cb741bd6534504b3925b,
+        type: 3}
+      propertyPath: sun
+      value: 
+      objectReference: {fileID: 1594558855}
     - target: {fileID: 8591903206400236081, guid: b146cae64ee4cb741bd6534504b3925b,
         type: 3}
       propertyPath: moveSpeed
