@@ -13,7 +13,10 @@ public class Cat : AnimalBase
 
         // Add extra functionality.
     }
-    public Transform sun;
+    public Transform sun;//if rotation range = x-xxy, cat leaves else stays around
+
+    //if rain, no cat, else instantiate.
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

@@ -48,7 +48,7 @@ public class Nest : MonoBehaviour
                     nestLost = true;
                     //Destroy(gameObject);
                 }
-                Debug.Log(nestCurrentHealth);
+                //Debug.Log(nestCurrentHealth);
             }
             
             //else

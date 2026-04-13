@@ -13,14 +13,14 @@ public class WeatherManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //InvokeRepeating("UpdateWeather", 5f, 5f);//checks if raining every 5 seconds
-        //InvokeRepeating("SpawnRain", 2f, 0.1f); //spawns rain every 1 second
+        InvokeRepeating("UpdateWeather", 5f, 5f);//checks if raining every 5 seconds
+        InvokeRepeating("SpawnRain", 2f, 0.1f); //spawns rain every 1 second
     }
 
     // Update is called once per frame
     void Update()
     {
-        SpawnRain();
+        //SpawnRain();
     }
 
     //void UpdateWeather()
