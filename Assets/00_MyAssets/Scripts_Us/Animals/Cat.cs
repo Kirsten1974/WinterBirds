@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Cat : AnimalBase, IEffects
+public class Cat : AnimalBase
 {
     public override void DoDamage(float amount)
     {

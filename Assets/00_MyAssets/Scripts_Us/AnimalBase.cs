@@ -2,7 +2,7 @@ using JetBrains.Annotations;
 using System.Data.Common;
 using UnityEngine;
 
-public abstract class AnimalBase : MonoBehaviour, IEffSects
+public abstract class AnimalBase : MonoBehaviour //, IEffects
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -24,16 +24,6 @@ public abstract class AnimalBase : MonoBehaviour, IEffSects
     public abstract void DoDamage(float amount);
 
     public abstract void DoDamageToNest(float amount);
-
-    public void EffectTimeOfDay()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void EffectWeather()
-    {
-        throw new System.NotImplementedException();
-    }
 
     // Update is called once per frame
     void Update()
