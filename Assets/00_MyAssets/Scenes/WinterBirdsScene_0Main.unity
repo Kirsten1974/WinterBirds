@@ -2371,7 +2371,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeatherManager
   rainPrefab: {fileID: 1251087092}
-  rainSpawnRate: 8.52
 --- !u!4 &1038210140
 Transform:
   m_ObjectHideFlags: 0
@@ -3575,6 +3574,7 @@ GameObject:
   - component: {fileID: 1594558855}
   - component: {fileID: 1594558854}
   - component: {fileID: 1594558856}
+  - component: {fileID: 1594558857}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -3691,6 +3691,19 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!114 &1594558857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594558853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f494b75d05ac9e3499672bcb7227cdc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DayAndNight
+  degreepersec: 10
 --- !u!1001 &1695849607
 PrefabInstance:
   m_ObjectHideFlags: 0
