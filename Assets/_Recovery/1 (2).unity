@@ -826,6 +826,7 @@ MonoBehaviour:
   - {fileID: 1177044670154092836, guid: ea4316119c5e71445b2e5c01f8fc3317, type: 3}
   enemyPrefabs:
   - {fileID: 2197194381303072369, guid: b146cae64ee4cb741bd6534504b3925b, type: 3}
+  - {fileID: 0}
 --- !u!4 &194958864
 Transform:
   m_ObjectHideFlags: 0
@@ -2351,8 +2352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 319849eddf7762f468e456ab72d00c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeatherManager
-  rainPrefab: {fileID: 4782605676741430618, guid: f6f5b5a0a6f306242915c891a4e582be,
-    type: 3}
+  rainPrefab: {fileID: 1251087092}
 --- !u!4 &1038210140
 Transform:
   m_ObjectHideFlags: 0
@@ -2756,6 +2756,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 887475639}
   m_SourcePrefab: {fileID: 100100000, guid: 48889531a8a82d346af7fb4c6e5c392e, type: 3}
+--- !u!1 &1251087092 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4782605676741430618, guid: f6f5b5a0a6f306242915c891a4e582be,
+    type: 3}
+  m_PrefabInstance: {fileID: 2228433578036101778}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1289663301
 GameObject:
   m_ObjectHideFlags: 0
