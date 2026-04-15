@@ -1,62 +1,63 @@
+using System.Diagnostics.Tracing;
 using UnityEngine;
 
 public class WeatherManager : MonoBehaviour
 {
-    public static float rainShower = 1f;
+    [SerializeField] public static float rainShower = 1.0f;
+    public int weather;
     bool isRaining;
-   
+
     //RainSettings
     [SerializeField] public GameObject rainPrefab;
 
-//    [SerializeField] public float rainSpawnRate = 0.1f;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        InvokeRepeating("UpdateWeather", 5f, 5f);//checks if raining every 5 seconds
-        InvokeRepeating("SpawnRain", 2f, 0.1f); //spawns rain every 1 second
+        //InvokeRepeating("SetRaining", 2f, 5f); //spawns rain every 5 second
+        InvokeRepeating(nameof(SetRaining), 2f, 5f);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        //SpawnRain();
+        //if (IsRaining()) SpawnRain();
+        if (isRaining) SpawnRain();
     }
 
-    //void UpdateWeather()
-    //{
-    //    isRaining = IsRain();
-    //}
-    
-    //public bool IsRain() //is it raining, yes or no?
-    //{
-    //    bool isRain = false;
-    //    int weather = Random.Range(0, 2);
+    /*
+    public bool IsRaining() //is it raining, yes or no?
+    {
+        if (weather == 0)
+        {
+            //isRain = false; //no showers
+            Debug.Log("It isn't raining");
+            return false;
+        }
+        else
+        {
+            //isRain = true; //rain shower;
+            Debug.Log("It IS raining");
+            return true;
+        }
+    }
+    */
 
-    //    if (weather == 0)
-    //    {
-    //        isRain = false; //no showers
-    //    }
-    //    else
-    //    {
-    //        isRain = true; //rain shower;
-    //    }
-    //    return isRain;
-    //}
+    public void SetRaining()
+    {
+        weather = Random.Range(0, 2);
+
+        if (weather == 0) isRaining = false;
+        else isRaining = true;
+    }
     void SpawnRain()
     {
         float xArea = 40;
         float zArea = 40f;
-        float yArea = 40f;
+        float yArea = 40f;       
+        
+        Vector3 spawnPos = new Vector3(Random.Range(-xArea, xArea), yArea, Random.Range(-zArea, zArea));
 
-        //if (isRaining)
-        {
-            Vector3 spawnPos = new Vector3(Random.Range(-xArea, xArea), yArea, Random.Range(-zArea, zArea));
-            
-            Instantiate(rainPrefab, spawnPos, rainPrefab.transform.rotation);
-
-        }
-
+        Instantiate(rainPrefab, spawnPos, rainPrefab.transform.rotation);
+        
     }
     public void EffectTimeOfDay() //night or day
     {

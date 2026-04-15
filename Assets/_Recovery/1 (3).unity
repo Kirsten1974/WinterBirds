@@ -2351,8 +2351,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 319849eddf7762f468e456ab72d00c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeatherManager
+  timer: 5
   rainPrefab: {fileID: 4782605676741430618, guid: f6f5b5a0a6f306242915c891a4e582be,
     type: 3}
+  weatherTimer: 0
 --- !u!4 &1038210140
 Transform:
   m_ObjectHideFlags: 0
