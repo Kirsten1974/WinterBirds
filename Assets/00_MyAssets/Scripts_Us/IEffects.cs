@@ -7,4 +7,8 @@ public interface IEffects
     //public abstract void EffectWindSpeed();
     public abstract void EffectTimeOfDay();
 
+    public abstract void DayAndNight();
+
+      
+
 }

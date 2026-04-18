@@ -12,10 +12,15 @@ public class Nest : MonoBehaviour
     public Vector3 originalNestSize;
     private bool nestLost = false;
 
-    public void DoDamage(int amount)
-    {
-        throw new System.NotImplementedException();
-    }
+    //public void TakeDamage(float amount) // this is for the cat's damage to the nest
+    //{ 
+    // nestCurrentHealth -= amount;
+    //}
+      
+    //public void DoDamage(int amount)
+    //{
+    //    throw new System.NotImplementedException();
+    //}
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
