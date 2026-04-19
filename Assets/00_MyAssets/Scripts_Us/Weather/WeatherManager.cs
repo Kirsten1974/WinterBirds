@@ -50,7 +50,7 @@ public class WeatherManager : MonoBehaviour
     }
     void SpawnRain()
     {
-        float xArea = 40;
+        float xArea = 40f;
         float zArea = 40f;
         float yArea = 40f;       
         

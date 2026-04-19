@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NestHealth
   nestMaxHealth: 100
-  nestCurrentHealth: 100
+  nestCurrentHealth: 60
   originalNestSize: {x: 13, y: 3, z: 13}
   nestHealth: 1
   nestVisual: {fileID: 6045399602126888272}
@@ -98,17 +98,17 @@ PrefabInstance:
     - target: {fileID: 5027404194191208254, guid: 5a912551588fed849a77de07e22e671e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 13.862
+      value: 7.8
       objectReference: {fileID: 0}
     - target: {fileID: 5027404194191208254, guid: 5a912551588fed849a77de07e22e671e,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.116455
+      value: 1.8000001
       objectReference: {fileID: 0}
     - target: {fileID: 5027404194191208254, guid: 5a912551588fed849a77de07e22e671e,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 13.862
+      value: 7.8
       objectReference: {fileID: 0}
     - target: {fileID: 5027404194191208254, guid: 5a912551588fed849a77de07e22e671e,
         type: 3}

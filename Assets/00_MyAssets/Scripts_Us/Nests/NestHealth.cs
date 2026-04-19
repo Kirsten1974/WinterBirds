@@ -25,7 +25,7 @@ public class NestHealth : MonoBehaviour
         {
             nestCurrentHealth = 0f;
             nestLost = true;
-                    
+           // Debug.Log("Nest Lost");
         }
         float healthPercent = nestCurrentHealth / (float) nestMaxHealth;
         nestVisual.localScale = originalNestSize * healthPercent;  /* with transform it resized the nest in a weird way, was gone after one hit, that are registered as several.

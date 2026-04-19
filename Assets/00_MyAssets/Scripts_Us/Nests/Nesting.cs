@@ -14,7 +14,7 @@ public class Nesting : MonoBehaviour
         if (nestHealth > 0f)
         {
             nestHealth = nestHealth - Time.deltaTime;
-            Debug.Log("Nest health is" + nestHealth);
+            //Debug.Log("Nest health is" + nestHealth);
 
         }
         else 
