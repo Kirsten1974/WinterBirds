@@ -49,11 +49,11 @@ public class Nest : MonoBehaviour
                 if (nestCurrentHealth < 0f)
                 {
                     nestCurrentHealth = 0f;
-                    Debug.Log("Nest Lost");
+                  //  Debug.Log("Nest Lost");
                     nestLost = true;
                     //Destroy(gameObject);
                 }
-                Debug.Log(nestCurrentHealth);
+               // Debug.Log(nestCurrentHealth);
             }
             
             //else

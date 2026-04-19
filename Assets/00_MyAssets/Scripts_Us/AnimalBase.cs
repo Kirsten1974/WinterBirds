@@ -23,7 +23,7 @@ public abstract class AnimalBase : MonoBehaviour //,IEffects
     //void EffectTimeOfDay();
     public abstract void DoDamage(float amount);
 
-    public abstract void DoDamageToNest(float amount);
+    public abstract void DoDamageToNest(NestHealth nest,float amount);
 
     public void EffectTimeOfDay()
     {

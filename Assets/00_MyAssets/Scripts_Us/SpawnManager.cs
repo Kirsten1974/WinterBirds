@@ -39,7 +39,7 @@ public class SpawnManager : MonoBehaviour
 
         //Randomly generates enemy index and spawn position
         int enemyIndex = Random.Range(0, enemyPrefabs.Length);
-        Vector3 spawnPos = new Vector3(Random.Range(-landXRange, landXRange), 0, Random.Range(-landZRange, landZRange));
+        Vector3 spawnPos = new Vector3(Random.Range(-landXRange, landXRange), 3, Random.Range(-landZRange, landZRange));
 
         Instantiate(enemyPrefabs[enemyIndex], spawnPos, enemyPrefabs[enemyIndex].transform.rotation);
     }
