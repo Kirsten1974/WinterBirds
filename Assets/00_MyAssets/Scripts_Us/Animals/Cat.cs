@@ -42,7 +42,7 @@ public class Cat : AnimalBase //IEffects
 
         //spawn checker based on weather?
         //DoDamageToNest(0.1f);
-        manager = FindFirstObjectByType<WeatherManager>();
+        manager = FindFirstObjectByType<WeatherManager>(); //communicates with WeatherManager
         
             //findweather manager thingy
     }
@@ -56,7 +56,7 @@ public class Cat : AnimalBase //IEffects
 
     }
 
-    public override void Activity()
+    public override void Activity() //poly
     {
         //if (WeatherManager.day == false;)
         //bool day = EffectTimeOfDay.day(true);
