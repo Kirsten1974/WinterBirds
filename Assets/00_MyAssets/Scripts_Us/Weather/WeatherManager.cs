@@ -35,13 +35,13 @@ public class WeatherManager : MonoBehaviour
         else
         {
             //isRain = true; //rain shower;
-            Debug.Log("It IS raining");
+            Debug.Log("It IS raining");         //removed spawn rain
             return true;
         }
     }
     */
 
-    public void SetRaining()
+    public void SetRaining()  //is it raining? yes or no? //if (WeatherManager.isRaining)
     {
         weather = Random.Range(0, 2);
 
