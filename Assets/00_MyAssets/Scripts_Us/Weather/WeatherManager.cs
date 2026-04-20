@@ -3,11 +3,15 @@ using UnityEngine;
 
 public class WeatherManager : MonoBehaviour
 {
+    //SunStuff
+    //public GameObject sunPrefab;
+    public Transform sun; //if rotation range = x-xxy, cat leaves else stays around
+    public bool day;
+
+    //Rain
     [SerializeField] public static float rainShower = 1.0f;
     public int weather;
     bool isRaining;
-
-    //RainSettings
     [SerializeField] public GameObject rainPrefab;
 
     void Start()
@@ -15,10 +19,12 @@ public class WeatherManager : MonoBehaviour
         //InvokeRepeating("SetRaining", 2f, 5f); //spawns rain every 5 second
         InvokeRepeating(nameof(SetRaining), 2f, 5f);
     }
+    
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        EffectTimeOfDay();
         //if (IsRaining()) SpawnRain();
         if (isRaining) SpawnRain();
     }
@@ -59,9 +65,25 @@ public class WeatherManager : MonoBehaviour
         Instantiate(rainPrefab, spawnPos, rainPrefab.transform.rotation);
         
     }
-    public void EffectTimeOfDay() //night or day
+    public bool EffectTimeOfDay() //day or night
     {
+        float sunRotation = sun.eulerAngles.x; //AI helped with this part, didn't know, what euler.Angles are and such
 
+        Debug.Log("Sun is at " + sunRotation);
+        if (sunRotation > 160 && sunRotation < 359)
+        {
+            day = false; //it is night
+            return day;
+        }
+        else
+        {
+            day = true; //it is day
+            return day;
+        }
+
+
+        
     }
 
-}
+
+    }

@@ -153,12 +153,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f42a6d2fa538634a9578af3d799d2ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cat
+  sun: {fileID: 2931798542215232608, guid: 28f239ced4a3ef845867659ed432c31d, type: 3}
+  day: 1
+  weather: 0
+  rainPrefab: {fileID: 0}
   moveSpeed: 10
   attackDamage: 0.01
   giveUpTimer: 3
   animalHealth: 5
   spawnRate: 0
   damage: 20
-  nest: {fileID: 4986798691674050262, guid: 6e90f7a4fc0e7864b976a9aaceedd60e, type: 3}
-  sun: {fileID: 2931798542215232608, guid: 28f239ced4a3ef845867659ed432c31d, type: 3}
-  day: 1
+  nest: {fileID: 0}
+  manager: {fileID: 0}
