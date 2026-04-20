@@ -4,8 +4,8 @@ public class Cat : AnimalBase //IEffects
 {
     public float damage = 1f;
     public NestHealth nest;
-    public Transform sun; //if rotation range = x-xxy, cat leaves else stays around
-    public bool day = true;
+    [SerializeField] private WeatherManager manager;
+
     public override void DoDamage(float amount)
     {
         throw new System.NotImplementedException();
@@ -39,28 +39,35 @@ public class Cat : AnimalBase //IEffects
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
         //spawn checker based on weather?
         //DoDamageToNest(0.1f);
+        manager = FindFirstObjectByType<WeatherManager>();
+        
+            //findweather manager thingy
     }
 
     // Update is called once per frame
     void Update()
     {
-        float sunRotation = sun.eulerAngles.x; //AI helped with this part, didn't know, what euler.Angles are and such
-        Debug.Log(sunRotation);
-        if (sunRotation > 160 && sunRotation < 359)
-            day = false;                    
-        else 
-            day = true; 
 
-        if (day == false)               //cat only moves at night (roughly)
-        {
 
-            transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed); //moves
-            // trigger event, if cat in sphere, do damage
-            //damagesNest
-        }
-        
+        Activity();
+
+    }
+
+    public override void Activity()
+    {
+        //if (WeatherManager.day == false;)
+        //bool day = EffectTimeOfDay.day(true);
+
+        if (!manager.day) 
+            {
+                transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed); //moves
+                                                                                   // trigger event, if cat in sphere, do damage
+                                                                                   //damagesNest
+            }
+
     }
 
 

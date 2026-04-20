@@ -40,4 +40,6 @@ public abstract class AnimalBase : MonoBehaviour //,IEffects
     {
         
     }
+
+    public abstract void Activity();
 }

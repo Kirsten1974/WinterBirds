@@ -1530,6 +1530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 319849eddf7762f468e456ab72d00c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeatherManager
+  sun: {fileID: 1594558855}
+  day: 0
   weather: 0
   rainPrefab: {fileID: 4782605676741430618, guid: f6f5b5a0a6f306242915c891a4e582be,
     type: 3}
@@ -3521,6 +3523,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6045399602126888272, guid: 6e90f7a4fc0e7864b976a9aaceedd60e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 15.999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045399602126888272, guid: 6e90f7a4fc0e7864b976a9aaceedd60e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.6923077
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045399602126888272, guid: 6e90f7a4fc0e7864b976a9aaceedd60e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 15.999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045399602126888272, guid: 6e90f7a4fc0e7864b976a9aaceedd60e,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6545149530455196968, guid: 6e90f7a4fc0e7864b976a9aaceedd60e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3970,36 +3992,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 402877953188071989, guid: b146cae64ee4cb741bd6534504b3925b,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 1.0628067
-      objectReference: {fileID: 0}
-    - target: {fileID: 402877953188071989, guid: b146cae64ee4cb741bd6534504b3925b,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 1.0611752
-      objectReference: {fileID: 0}
-    - target: {fileID: 402877953188071989, guid: b146cae64ee4cb741bd6534504b3925b,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 1.079166
-      objectReference: {fileID: 0}
-    - target: {fileID: 402877953188071989, guid: b146cae64ee4cb741bd6534504b3925b,
-        type: 3}
-      propertyPath: m_Center.x
-      value: 0.0001306016
-      objectReference: {fileID: 0}
-    - target: {fileID: 402877953188071989, guid: b146cae64ee4cb741bd6534504b3925b,
-        type: 3}
-      propertyPath: m_Center.y
-      value: -0.010039987
-      objectReference: {fileID: 0}
-    - target: {fileID: 402877953188071989, guid: b146cae64ee4cb741bd6534504b3925b,
-        type: 3}
-      propertyPath: m_Center.z
-      value: 0.01461068
-      objectReference: {fileID: 0}
     - target: {fileID: 2197194381303072369, guid: b146cae64ee4cb741bd6534504b3925b,
         type: 3}
       propertyPath: m_Name
@@ -4065,11 +4057,6 @@ PrefabInstance:
       propertyPath: nest
       value: 
       objectReference: {fileID: 183804211}
-    - target: {fileID: 8591903206400236081, guid: b146cae64ee4cb741bd6534504b3925b,
-        type: 3}
-      propertyPath: damage
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
