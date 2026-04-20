@@ -6,12 +6,12 @@ public class WeatherManager : MonoBehaviour
     //SunStuff
     //public GameObject sunPrefab;
     public Transform sun; //if rotation range = x-xxy, cat leaves else stays around
-    public bool day;
+    public bool day; //public because needs to be accessible to other scripts (eg - cats)
 
     //Rain
     [SerializeField] public static float rainShower = 1.0f;
     public int weather;
-    bool isRaining;
+    public bool isRaining; //public because needs to be accessible to other scripts (eg - cats)
     [SerializeField] public GameObject rainPrefab;
 
     void Start()

@@ -13,13 +13,15 @@ public abstract class AnimalBase : MonoBehaviour //,IEffects
     [SerializeField] protected float animalHealth;
     [SerializeField] protected float spawnRate;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public abstract void Activity();
+
+}
+
+public abstract class Enemy : AnimalBase
+{
+    public abstract void TargetPlayer();
     public abstract void DoDamage(float attackDamage);
     public abstract void DoDamageToNest(NestHealth nest, float amount);
+
 }
