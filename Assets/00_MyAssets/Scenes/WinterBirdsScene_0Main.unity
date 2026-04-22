@@ -1300,6 +1300,87 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 688338250}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &860956127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 860956128}
+  - component: {fileID: 860956129}
+  - component: {fileID: 860956130}
+  - component: {fileID: 860956131}
+  m_Layer: 0
+  m_Name: PlayerCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &860956128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860956127}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1350504455}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &860956129
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860956127}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 15.62
+  m_Center: {x: 0.14, y: 1.1, z: 1}
+--- !u!114 &860956130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860956127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76d96394263bee347bc72f2859a8ae14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerRange
+  playerDetecter: 0
+--- !u!114 &860956131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860956127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0810f8ac92cca81429d634a2a38f7c40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDetecter
+  playerDetecter: 0
 --- !u!1 &886054118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1533,6 +1614,7 @@ MonoBehaviour:
   sun: {fileID: 1594558855}
   day: 0
   weather: 0
+  isRaining: 0
   rainPrefab: {fileID: 4782605676741430618, guid: f6f5b5a0a6f306242915c891a4e582be,
     type: 3}
 --- !u!4 &1038210140
@@ -1993,6 +2075,7 @@ Transform:
   - {fileID: 53378593}
   - {fileID: 153508625}
   - {fileID: 1419965734}
+  - {fileID: 860956128}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1352506359
@@ -4047,11 +4130,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8591903206400236081, guid: b146cae64ee4cb741bd6534504b3925b,
-        type: 3}
-      propertyPath: sun
-      value: 
-      objectReference: {fileID: 1594558855}
     - target: {fileID: 8591903206400236081, guid: b146cae64ee4cb741bd6534504b3925b,
         type: 3}
       propertyPath: nest

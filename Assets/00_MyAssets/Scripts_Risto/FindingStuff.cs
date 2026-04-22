@@ -21,10 +21,10 @@ namespace AA0000
         {
             //targetForNameFinding = GameObject.Find("== Week 04 ==");
             //targetForNameFinding = GameObject.Find("PuppetCylinder");
-            targetGameobjectForNameFinding = GameObject.Find("Cat");
-            targetTransformForNameFinding = targetGameobjectForNameFinding.transform.Find("Cat"); //Used the found gameobject by name and tood its transform and search for a child called ChildCube
+            targetGameobjectForNameFinding = GameObject.Find("Player");
+            targetTransformForNameFinding = targetGameobjectForNameFinding.transform.Find("Player"); //Used the found gameobject by name and tood its transform and search for a child called ChildCube
 
-            targetForTagFinding = GameObject.FindGameObjectWithTag("Food");
+            targetForTagFinding = GameObject.FindGameObjectWithTag("Player");
 
             //targetForTypeFinding = GameObject.FindFirstObjectByType<ThingToFind>().gameObject;
 
@@ -46,9 +46,9 @@ namespace AA0000
         }
         private void FindMeThings()
         {
-            targetGameobjectForNameFinding = GameObject.Find("Cat");
+            targetGameobjectForNameFinding = GameObject.Find("Player");
 
-            targetForTagFinding = GameObject.FindGameObjectWithTag("Food");
+            targetForTagFinding = GameObject.FindGameObjectWithTag("Player");
 
             targetForTypeFinding = GameObject.FindFirstObjectByType<Transform>().gameObject;
 

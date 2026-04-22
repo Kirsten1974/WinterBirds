@@ -21,7 +21,5 @@ public abstract class AnimalBase : MonoBehaviour //,IEffects
 public abstract class Enemy : AnimalBase
 {
     public abstract void TargetPlayer();
-    public abstract void DoDamage(float attackDamage);
-    public abstract void DoDamageToNest(NestHealth nest, float amount);
 
 }
