@@ -1,21 +1,45 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class Cat : Enemy //IEffects
+public class Cat : Enemy 
 {
-    public float damage = 1f;
+    [SerializeField] private float damage = 1f;
     public NestHealth nest;
     [SerializeField] private WeatherManager manager;
+    [SerializeField] private PlayerDetecter playerDetecter;
+    private Rigidbody catRb; //private to keep the cat to itself
+    private GameObject player;
 
-    public override void DoDamage(float amount)
+    void Start()
     {
-        throw new System.NotImplementedException();
+
+        //findweather weathermanager //association
+        manager = FindFirstObjectByType<WeatherManager>(); //communicates with WeatherManager
+        //helps find the target (player)
+        player = GameObject.FindGameObjectWithTag("Player");
+        //makes cat detect the player
+        playerDetecter = FindFirstObjectByType<PlayerDetecter>();
     }
 
-    public override void DoDamageToNest(NestHealth nest, float amount)
+    // Update is called once per frame
+    void FixedUpdate()
     {
-        nest.TakeDamage(amount);
+        //if the player is around, target it (move towards), otherwise walk around
+        if (playerDetecter.playerDetecter) {TargetPlayer();} else {Activity();}                  
 
-        // Add extra functionality.
+    }
+
+    public override void Activity() //poly
+    {
+        //if (WeatherManager.day == false;)
+        //bool day = EffectTimeOfDay.day(true);
+
+        if (!manager.day)
+        {
+            transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed); //moves
+
+        }
+
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -37,82 +61,32 @@ public class Cat : Enemy //IEffects
     //if rain, no cat, else instantiate.
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
 
-        //spawn checker based on weather?
-        //DoDamageToNest(0.1f);
-        manager = FindFirstObjectByType<WeatherManager>(); //communicates with WeatherManager
-
-        //findweather manager thingy
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-
-        Activity();
-
-    }
-
-    public override void Activity() //poly
-    {
-        //if (WeatherManager.day == false;)
-        //bool day = EffectTimeOfDay.day(true);
-
-        if (!manager.day)
-        {
-            transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed); //moves
-                                                                               // trigger event, if cat in sphere, do damage
-                                                                               //damagesNest
-        }
-
-    }
     public override void TargetPlayer()
     {
+        
+        //Source: Junior Programmer 4.2
+        if (!manager.day)
         {
-            //FROM GE, helps target player, but there is an offset, needs to be fixed for our game
-            //Add 'OnTriggerEnter SphereCollider
-
-            //public Transform player;               // Drag your Player here in Inspector
-            //public Vector3 offset = new Vector3(0, 0, -0.5f); // Relative position behind player
-            //public float followSpeed = 5f;         // How fast the buddy moves
-
-            //private Rigidbody followRb;
-
-            //void Start()
-            //{
-            //    followRb = GetComponent<Rigidbody>();
-            //    // Make sure Rigidbody is kinematic
-            //    followRb.isKinematic = true;
-
-            //    // Optional: find player automatically if not assigned
-            //    if (player == null)
-            //    {
-            //        GameObject p = GameObject.Find("Player");
-            //        if (p != null) player = p.transform;
-            //    }
-            //}
-
-            //void FixedUpdate()
-            //{
-
-            //    if (player == null) return;
-
-            //    // Calculate the target position relative to the player
-            //    Vector3 targetPosition = player.position + offset;
-
-            //    // Move smoothly toward target
-            //    Vector3 newPosition = Vector3.Lerp(followRb.position, targetPosition, followSpeed * Time.fixedDeltaTime);
-
-            //    // Move the Rigidbody without physics collisions pushing it
-            //    followRb.MovePosition(newPosition);
-
-            //}
+            //makes cat changes its position by
+            //looking at own current position, players position, moves towards player @ deltaTime
+            transform.position = Vector3.MoveTowards
+                (transform.position, player.transform.position, moveSpeed * Time.fixedDeltaTime); 
+            //ChatGPT recommended adding fixed
+            //looked up UnityAPI for MoveTowards info, also recommended fixedDeltaTime
+            
         }
+        
+    }
+    public void DoDamage(float attackDamage)
+    {
+        throw new System.NotImplementedException();
+    }
 
+    public void DoDamageToNest(NestHealth nest, float amount)
+    {
+        nest.TakeDamage(amount);
 
+        // Add extra functionality.
     }
 }
-

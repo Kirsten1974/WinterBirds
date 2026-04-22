@@ -15,7 +15,7 @@ public class PlayerMove : MonoBehaviour
     {
         //Code automatically puts in what Sabrina's recommended turnSpeed to speed ratio
         //when using rotation functions
-        //turnSpeed = speed * 4f;  
+        turnSpeed = speed * 4f;  
     }
 
     // Update is called once per frame
