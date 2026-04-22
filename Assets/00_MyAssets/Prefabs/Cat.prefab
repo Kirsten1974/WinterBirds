@@ -116,9 +116,9 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 114
   m_CollisionDetection: 0
 --- !u!65 &402877953188071989
 BoxCollider:
@@ -161,3 +161,4 @@ MonoBehaviour:
   damage: 20
   nest: {fileID: 0}
   manager: {fileID: 0}
+  playerDetecter: {fileID: 0}
