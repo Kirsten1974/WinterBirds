@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7187990441925037772}
   - component: {fileID: 402877953188071989}
   - component: {fileID: 8591903206400236081}
+  - component: {fileID: 4096434541536961372}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Enemy
@@ -161,4 +162,27 @@ MonoBehaviour:
   damage: 20
   nest: {fileID: 0}
   manager: {fileID: 0}
-  playerDetecter: {fileID: 0}
+  catPrefab: {fileID: 2197194381303072369}
+--- !u!136 &4096434541536961372
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2197194381303072369}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6
+  m_Height: 2.5
+  m_Direction: 2
+  m_Center: {x: 0, y: 0.1, z: 0}

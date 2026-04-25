@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
@@ -5,14 +6,13 @@ public class Cat : Enemy
 {
     [SerializeField] private float damage = 1f;
     public NestHealth nest;
-    [SerializeField] private WeatherManager manager;
-    [SerializeField] private PlayerDetecter playerDetecter;
-    private Rigidbody catRb; //private to keep the cat to itself
+    [SerializeField] private WeatherManager manager; 
+    
     private GameObject player;
+    private PlayerDetecter playerDetecter;
 
     void Start()
     {
-
         //findweather weathermanager //association
         manager = FindFirstObjectByType<WeatherManager>(); //communicates with WeatherManager
         //helps find the target (player)
@@ -25,7 +25,7 @@ public class Cat : Enemy
     void FixedUpdate()
     {
         //if the player is around, target it (move towards), otherwise walk around
-        if (playerDetecter.playerDetecter) {TargetPlayer();} else {Activity();}                  
+        if (playerDetecter.playerDetecter) {TargetPlayer();} else {Activity();}
 
     }
 
@@ -34,11 +34,11 @@ public class Cat : Enemy
         //if (WeatherManager.day == false;)
         //bool day = EffectTimeOfDay.day(true);
 
-        if (!manager.day)
+        if (!manager.day) //nighttime actions
         {
-            transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed); //moves
-
+            transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed); //moves around
         }
+
 
     }
     private void OnTriggerEnter(Collider other)
@@ -58,9 +58,10 @@ public class Cat : Enemy
          }*/
     }
 
-    //if rain, no cat, else instantiate.
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    //if no ground, no cat, else instantiate.
+
+        // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public override void TargetPlayer()
     {
