@@ -67,9 +67,9 @@ public class WeatherManager : MonoBehaviour
     }
     public bool EffectTimeOfDay() //day or night
     {
-        float sunRotation = sun.eulerAngles.x; //AI helped with this part, didn't know, what euler.Angles are and such
+        float sunRotation = sun.eulerAngles.x;             //AI helped with this part, didn't know, what euler.Angles are and such
 
-        //Debug.Log("Sun is at " + sunRotation);  //removed because works
+        //Debug.Log("Sun is at " + sunRotation);           //removed because works
         if (sunRotation > 160 && sunRotation < 359)
         {
             day = false; //it is night
