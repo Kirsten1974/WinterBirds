@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Nest : MonoBehaviour
+public class Nest1 : MonoBehaviour
 
 //want the nest's own health to deteriorate slowly over time
 //nest will provide health to player
@@ -12,10 +12,15 @@ public class Nest : MonoBehaviour
     public Vector3 originalNestSize;
     private bool nestLost = false;
 
-    public void DoDamage(int amount)
-    {
-        throw new System.NotImplementedException();
-    }
+    //public void TakeDamage(float amount) // this is for the cat's damage to the nest
+    //{ 
+    // nestCurrentHealth -= amount;
+    //}
+      
+    //public void DoDamage(int amount)
+    //{
+    //    throw new System.NotImplementedException();
+    //}
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,11 +49,11 @@ public class Nest : MonoBehaviour
                 if (nestCurrentHealth < 0f)
                 {
                     nestCurrentHealth = 0f;
-                    Debug.Log("Nest Lost");
+                  //  Debug.Log("Nest Lost");
                     nestLost = true;
                     //Destroy(gameObject);
                 }
-                Debug.Log(nestCurrentHealth);
+               // Debug.Log(nestCurrentHealth);
             }
             
             //else

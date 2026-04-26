@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class NutritionBase : MonoBehaviour
+public abstract class NutritionBase : MonoBehaviour //add IEffects weather stuff later?
 {
     [SerializeField] float addHP;
     [SerializeField] float appearance;
