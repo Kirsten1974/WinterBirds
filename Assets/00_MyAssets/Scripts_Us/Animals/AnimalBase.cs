@@ -2,24 +2,22 @@ using JetBrains.Annotations;
 using System.Data.Common;
 using UnityEngine;
 
-public abstract class AnimalBase : MonoBehaviour //,IEffects
+public abstract class AnimalBase : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
 
     [SerializeField] protected float moveSpeed;
-    [SerializeField] protected float attackDamage;
     [SerializeField] protected float giveUpTimer;
     [SerializeField] protected float animalHealth;
-    [SerializeField] protected float spawnRate;
-
+    //[SerializeField] protected float spawnRate; //moved to Spawn Manager
 
     public abstract void Activity();
 
 }
 
-public abstract class Enemy : AnimalBase
+public abstract class Enemy : AnimalBase //Still needs IDoDamage
 {
-    public abstract void TargetPlayer();
+    [SerializeField] protected float attackDamage;
+
+    public abstract void TargetPlayer(); //chases player
 
 }
