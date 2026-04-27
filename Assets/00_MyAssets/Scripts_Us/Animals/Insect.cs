@@ -21,9 +21,9 @@ public class Insect : AnimalBase
     {
         //Fly will 'rotate around' the lake's position
         //moveSpeed in this case is the degrees/sec
-
-        transform.RotateAround(lake.transform.position, Vector3.up, moveSpeed * Time.deltaTime);  //Fly in circles
+        //Flies "around" in circles
+        transform.RotateAround(lake.transform.position, Vector3.up, moveSpeed * Time.deltaTime);
         //has food tag
-        //could IHeal
+        //add IHeal
     }
 }

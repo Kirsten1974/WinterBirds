@@ -4289,6 +4289,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cat
       objectReference: {fileID: 0}
+    - target: {fileID: 2197194381303072369, guid: b146cae64ee4cb741bd6534504b3925b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4082274585360296669, guid: b146cae64ee4cb741bd6534504b3925b,
         type: 3}
       propertyPath: m_LocalPosition.x

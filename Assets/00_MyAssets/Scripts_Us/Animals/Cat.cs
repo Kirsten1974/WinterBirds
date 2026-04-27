@@ -32,7 +32,7 @@ public class Cat : Enemy
         //if (WeatherManager.day == false;)
         //bool day = EffectTimeOfDay.day(true);
 
-        if (!manager.day) //nighttime actions
+        if (!manager.day) //cat moves at night
         {
             transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed); //moves around
         }
