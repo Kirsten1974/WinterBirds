@@ -1577,7 +1577,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7893002047336768349, guid: c162dc559fe6013439b8f28ee082bb67,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1882150830}
   m_SourcePrefab: {fileID: 100100000, guid: c162dc559fe6013439b8f28ee082bb67, type: 3}
 --- !u!1 &984390937
 GameObject:
@@ -3062,6 +3066,24 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1882150829 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7893002047336768349, guid: c162dc559fe6013439b8f28ee082bb67,
+    type: 3}
+  m_PrefabInstance: {fileID: 942150349}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1882150830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882150829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddc4b51eb8fbc8546a148813219a182a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Stick
 --- !u!1 &1999894589
 GameObject:
   m_ObjectHideFlags: 0
