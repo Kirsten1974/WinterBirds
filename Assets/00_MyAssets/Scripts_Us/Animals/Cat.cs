@@ -5,12 +5,10 @@ using UnityEngine;
 public class Cat : Enemy 
 {
     [SerializeField] private float damage = 1f;
-    public NestHealth nest;
     [SerializeField] private WeatherManager manager; 
-    
     private GameObject player;
     private PlayerDetecter playerDetecter;
-
+    public NestHealth nest;
     void Start()
     {
         //findweather weathermanager //association
@@ -46,7 +44,7 @@ public class Cat : Enemy
         if (other.CompareTag("Nest"))
         {
             NestHealth nest = other.GetComponent<NestHealth>();   // AI sugested that as a solution for the problem that cat clones don't do damage
-
+                                                                  // It could be solved with FindObjectBy... but this makes more sense here
             if (nest != null)
             {
                 DoDamageToNest(nest, damage);  //cat and cat clone deal damage to the nest if the nests health is not 0
