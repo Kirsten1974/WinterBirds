@@ -17,7 +17,7 @@ public class WeatherManager : MonoBehaviour
     void Start()
     {
         //InvokeRepeating("SetRaining", 2f, 5f); //spawns rain every 5 second
-        InvokeRepeating(nameof(SetRaining), 2f, 5f);
+        InvokeRepeating(nameof(SetRaining), 2f, 5f); //'nameof' shown to us by Sami
     }
     
 

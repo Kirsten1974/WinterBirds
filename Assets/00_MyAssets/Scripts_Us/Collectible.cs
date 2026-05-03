@@ -2,6 +2,13 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 
+    /*This script was added from Sab GE collectible
+     * allows collectible object to rotate
+     * upon collection:
+     *      -object is destroyed
+     *      -starts particle effect (poof!)
+     *      -plays collection sound */
+
 
 {
 

@@ -2,7 +2,12 @@ using JetBrains.Annotations;
 using System.Data.Common;
 using UnityEngine;
 
-public abstract class AnimalBase : MonoBehaviour
+
+/* C
+ * 
+ * 
+ */
+public abstract class AnimalBase : MonoBehaviour //this class has all the 'what' for all animals
 {
 
     [SerializeField] protected float moveSpeed;
@@ -14,10 +19,10 @@ public abstract class AnimalBase : MonoBehaviour
 
 }
 
-public abstract class Enemy : AnimalBase //Still needs IDoDamage
+public abstract class Enemy : AnimalBase //, IDoDamage //Still needs IDoDamage implementation
 {
     [SerializeField] protected float attackDamage;
 
-    public abstract void TargetPlayer(); //chases player
+    public abstract void TargetPlayer(); //chases player, Sab
 
 }
