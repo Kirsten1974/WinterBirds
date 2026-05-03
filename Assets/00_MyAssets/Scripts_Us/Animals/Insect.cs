@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Insect : AnimalBase
+public class Insect : AnimalBase //add IHeal implementation, has foodtag
 
 {
     public GameObject lake;
@@ -23,7 +23,6 @@ public class Insect : AnimalBase
         //moveSpeed in this case is the degrees/sec
         //Flies "around" in circles
         transform.RotateAround(lake.transform.position, Vector3.up, moveSpeed * Time.deltaTime);
-        //has food tag
-        //add IHeal
+        
     }
 }
