@@ -23,9 +23,9 @@ public class PlayerMove : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");//taken from input manager
         verticalInput = Input.GetAxis("Vertical");
-        flightInput = Input.GetAxis("Flight");
+        flightInput = Input.GetAxis("Flight"); // "created" in input manager
 
-        transform.Translate(Vector3.forward * speed * verticalInput * Time.deltaTime); //moves forwards or back
+        transform.Translate(Vector3.forward * speed * verticalInput * Time.deltaTime); //moves forwards (or back, if back)
         transform.Rotate(Vector3.up* turnSpeed * horizontalInput * Time.deltaTime); //rotates bird
         transform.Rotate(Vector3.left * turnSpeed * flightInput * Time.deltaTime); // makes the bird go up and down by using z and x keys
         //moves left or right 
