@@ -1,0 +1,4 @@
+So the following scripts are created by me(Rui) in "general"
+(Part 1 for birds): Bird, RED_Bird, BLUE_Bird, Test_Bird-----> Those can be found in the Bird folder in assets.
+(Part 2 for Nest & houses): BirdCollector, Collectiable item, Simple Bird Movement, Stick.-----> Those can be found in Nest & House folder in assets as well.
+Bird collector and Simple Bird Movement was created by Chatgpt. But the second one I did not mention in the 1 on 1 evaluation, because it was overlaping with my teammates's scripts.
